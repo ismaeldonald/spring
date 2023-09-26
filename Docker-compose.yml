@@ -1,0 +1,48 @@
+
+version: '3'
+
+services:
+
+
+
+## answer-service Docker Compose Config
+answer-service:
+   image:
+   container_name: answer-service
+   pull_policy: always
+   ports:
+     - "8083:8083"
+   environment:
+     - SPRING_PROFILE_ACTIVE=docker
+   depend on:
+     -
+
+
+
+## api-gateway-service Docker Compose Config
+
+
+
+## Course-Service Docker Compose Config
+course-service:
+   image:
+   container_name: course-service
+   pull_policy: always
+   ports:
+     - "8081:8081"
+   environment:
+     - SPRING_PROFILE_ACTIVE=docker
+   depend on:
+     -
+
+
+## eureka-service Docker Compose Config
+
+
+## exam-service Docker Compose Config
+
+
+## user-service Docker Compose Config
+
+
+## zuul-service Docker Compose Config

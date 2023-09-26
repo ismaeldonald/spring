@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: answer-service
+
+server:
+  port: 8083
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      default-zone: http://localhost:8083/answer
